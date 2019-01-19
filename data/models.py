@@ -1,3 +1,5 @@
+from game import game
+from player import player
 from django.db import models
 from django import forms
 
@@ -33,3 +35,15 @@ class Random(models.Model):
 
     def __str__(self):
         return self.title
+
+class Game(models.Model):
+    player1 = models.SlugField(blank = True)
+    player2 = models.SlugField(blank = True)
+    p1Score = models.SlugField(blank = True)
+    p2Score = models.SlugField(blank = True)
+    gameId = models.SlugField(blank = True)
+    isFull = models.SlugField(blank = True)
+
+class Player(models.Model):
+    playerName = models.SlugField(blank = True)
+    

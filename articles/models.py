@@ -1,3 +1,5 @@
+from game import game
+from player import player
 from django.db import models
 from django.contrib.auth.models import User
 
